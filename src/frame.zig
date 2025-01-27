@@ -1,7 +1,7 @@
 const color_mod = @import("color.zig");
 const std = @import("std");
 
-const Frame = struct {
+pub const Frame = struct {
     width: usize,
     height: usize,
     data: [][]color_mod.Color,
