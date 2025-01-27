@@ -1,7 +1,7 @@
 const std = @import("std");
 const testing = std.testing;
 
-const Color = struct {
+pub const Color = struct {
     r: f32,
     g: f32,
     b: f32,
