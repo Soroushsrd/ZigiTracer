@@ -7,7 +7,7 @@ pub const Frame = struct {
     data: [][]color_mod.Color,
     allocator: std.mem.Allocator,
 
-    pub fn init(allocator: std.mem.Allocator, width: usize, height: usize, color: *const color_mod.Color) void {
+    pub fn init(allocator: std.mem.Allocator, width: usize, height: usize, color: *const color_mod.Color) !void {
         const data = try allocator.alloc([]color_mod.Color, height);
         for (data) |*row| {
             row.* = try allocator.alloc(color_mod.Color, width);
